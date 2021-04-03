@@ -96,8 +96,8 @@ h5{
      margin-right:8px;
 }
 .menu_{
-     height:70px;
-     box-shadow:0px 0px 5px whitesmoke;
+     height:auto;
+    /* // box-shadow:0px 0px 5px whitesmoke; */
 }
 
 .urgence{
@@ -114,4 +114,36 @@ h5{
 }
 .menu #search:hover  .far{
     color:red;
+}
+.menu-dot-2 a{
+     text-align:center;
+}
+@media screen and (max-width:700px){
+       .menu_{
+             flex-wrap: wrap;
+       }
+       .menu_ img{
+            height:20px;
+            width:30px;
+       }
+      .menu-dot-2{
+             width:100%; 
+             display:flex;  
+             order:3 ;
+       }
+       .menu-dot-2 a{
+            padding:0.5px;
+            font-size:0.8em;  
+            text-align:center;
+            margin:auto;
+       }
+       .menu-dot-1{
+           margin:auto;
+           order:1;
+        }
+        .menu-dot-3{
+          margin:auto;
+          order:2;  
+       }
+
 }
