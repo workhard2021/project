@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+     <meta charset="utf-8">
+	 <title>Reseaux</title>
+     <script src="https://kit.fontawesome.com/7a201a122f.js" crossorigin="anonymous"></script>
+
+
+	  <style type="text/css">
+	  	  .wrapper_reseau{
+	  	  	   position:absolute;
+	  	  	   top:50%;
+	  	  	   left:50%;
+	  	  	   transform:translate(-50%,-50%);
+	  	  	   background:black;
+	  	  	   width:100%;
+	  	  	   height:100%;
+	  	  	   display:flex;
+	  	  	   justify-content:center;
+	  	  	   align-items:center;
+	  	  }
+	  	  .wrapper_reseau .btn{
+	  	  	     position:relative;
+	  	  	     display:flex;
+	  	  	     justify-content:space-around;
+	  	  	     align-items:center;
+	  	  	     flex-wrap:wrap;
+	  	  	     margin:auto;
+	  	  	     width:50%;
+	  	  	     height:50%;
+	  	  }
+	  	  .wrapper_reseau .btn a{
+	  	  	  display:block;
+	  	  	  text-decoration:none;
+	  	  	  color:white;
+	  	  	  padding:20px;
+	  	  	  margin:30px 20px;
+	  	  	  background:grey;
+	  	  	  border-radius:50%;
+	  	  	  font-size:40px;
+	  	  	  position:relative;z-index:9;
+	  	  	  transition:all 0.5s;
+	  	  }
+	  	  
+	  	  
+	  	   .wrapper_reseau .lot{
+	  	       position:absolute;
+	  	   	   top:-30px;
+	  	   	   left:50%;
+	  	   	   opacity:0;
+	  	   	   transform:translate(-50%,-50%);
+	  	   	   font-size:14px;
+	  	   	   color:black;
+	  	   	   display:inline-block;
+	  	   	   background:red;
+	  	   	   padding:10px 15px;
+	  	   	   border-radius:15px;
+	  	   	   transition:all 0.9s ease-out;
+	  	    }
+	  	     .wrapper_reseau .lot:before{
+	  	   	  content:".";
+	  	   	  position:absolute;
+	  	   	  top:95%;
+	  	   	  left:50%;
+	  	   	  color:red;
+	  	   	  transform:translate(-50%,-50%)  skewX(30deg) skewY(30deg);
+	  	   	  display:block;
+	  	   	  width:10px;
+	  	   	  opacity:1;
+	  	   	  background:red;
+	  	   	  transition:all 0.8s ease-out;
+	  	   }
+
+	  	    .wrapper_reseau a:hover  .lot,.wrapper_reseau a:hover  .lot:before{
+	  	    	opacity:1;
+
+	  	    }
+	  	     .wrapper_reseau a:nth-child(1){
+	  	     	 background:blue;
+	  	     }
+	  	      .wrapper_reseau a:nth-child(2){
+	  	     	 background:grey;
+	  	     }
+	  	      .wrapper_reseau a:nth-child(3){
+	  	     	 background:red;
+	  	     }
+	  </style>
+
+</head>
+<body>
+	<div class="wrapper_reseau">
+		  <div class="btn">
+		  	 <a href="#"> <span class="facebook lot"> Facebook</span> <i class="fab fa-facebook-square"></i></a>
+		  	 <a href="#"><span class="github lot">Github</span><i class="fab fa-github"></i></a>
+		  	 <a href="#"><span class="instagram lot">Instagram</span><i class="fab fa-instagram"></i></a>
+		  </div>
+		
+	</div>
+
+</body>
+</html>

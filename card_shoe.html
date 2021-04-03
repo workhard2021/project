@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>shopping shopping</title>
+	<style type="text/css">
+		 *{
+		 	 font-family:'toppine' sans-serif;
+		 }
+
+		.wrapper_shopping{
+			  position:absolute;
+			  top:50%;
+			  left:50%;
+			  transform:translate(-50%,-50%);
+			  display:flex;
+			  justify-content:center;
+			  align-items:center;
+			  flex-direction:row;
+			  flex-wrap:wrap;
+			  width:100%;height:100%;
+			  background:black;
+			  perspective:800px;
+		}
+		.wrapper_shopping .card{
+			   position:relative;
+			   display:flex;
+			   justify-content:center;
+			   align-items:center;
+			   flex-direction:column;
+			   width:400px;height:500px;
+			   background:yellowgreen;
+			   box-shadow:0px 0px 10px black;
+			   border-radius:10px;
+			   transform-style: preserve-3d;
+			   transition:all 0.5s;
+		}
+
+		.wrapper_shopping .card_image{
+			  position:absolute;
+			  width:120px;
+			  height:120px;
+			  left:50%;
+			  top:22%;
+			  transform:translate(-50%,-50%);
+			  margin:auto;z-index:0;
+			  transition: all 0.5s;
+		}
+		.wrapper_shopping .circle{
+			 position:absolute;
+			 left:50%;
+			 top:22%;
+			 transform:translate(-50%,-50%);
+			 width:130px;
+			 height:130px;
+			 border-radius:50%;
+			 background:linear-gradient(48deg,blue,yellow);
+			 z-index:-1;
+		}
+		.detail{
+			 position:relative;
+			 top:40px;
+			 width:80%;
+			 margin:10px ;
+			 transition:all 0.5s;
+			 font-style:italic;
+			 color:grey; 
+		}
+		
+		.card_image img{
+			 position:relative;
+			 width:100%;
+			 height:100%;
+			 filter:saturate(1.2);
+			 border-radius:50%;
+		}
+		.detail h1{
+			 font-size:20px;
+			 font-family:sans-serif;
+			 text-align:center;
+
+		}
+		.detail p{
+			 font-size:17px;
+			 font-family:sans-serif;
+			 text-align:center;
+		}
+		.detail .btn,.detail .more{
+			   position:relative;
+			   display:flex;
+			   justify-content:center;
+			   align-items:center;
+			   flex-direction:row;
+			   margin:auto;
+
+		}
+		.detail a{
+			  text-decoration:none;
+			  display:inline-block;
+			  padding: 5px 30px;
+			  font-size:17px;
+			  font-family:sans-serif;
+			  margin:auto; 
+			  background:white;
+			  color:grey;
+			  border-radius:15px;
+		}
+		.more{
+			top:80px;
+		}
+        .more a{
+        	   padding: 10px 70px;
+        	   font-size:18px;
+        	   margin:auto;
+        }
+
+		  
+	</style>
+      
+		
+</head>
+<body>
+    <div class="wrapper_shopping">
+    	 	  <div class="card">
+    	 	  	  <div class="circle">
+    	 	  	  	
+    	 	  	  </div>
+    	 	  	  <div class="card_image">
+    	 	  	  	 <img src="shoe.png">
+    	 	  	  </div>
+    	 	  	  <div class="detail">
+
+    	 	  	  	 <h1>SHOPPING SHOE</h1>
+    	 	  	  	 <p>Excepteur sint occaecat cupidatat non
+    	 	  	  	 proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+    	 	  	  	 <div class="btn">
+    	 	  	  	 	<a href="#">pay </a>
+    	 	  	  	 	<a href="#">add  </a>
+    	 	  	  	 </div>
+    	 	  	  	 <div class="more"> 
+    	 	  	  	 	<a href="#">See more</a>
+    	 	  	  	 </div>
+    	 	  	  	
+    	 	  	  </div>
+    	 	  	
+    	 	  </div>
+    	 	
+    	
+    </div>
+    <script type="text/javascript">
+
+    	 let wrapper=document.querySelector('.wrapper_shopping');
+    	 let card=document.querySelector('.card');
+    	 let title=document.querySelector('.detail');
+    	 let shoe=document.querySelector('.card_image');
+    	
+       card.addEventListener('mousemove',function(e){
+       	     let x= (window.innerWidth / 2- e.pageX)/15;
+       	     let y= (window.innerHeight/ 2- e.pageY)/15;
+       	      
+       	      card.style.transform=`rotateY(${y}deg) rotateX(${x}deg)`;
+       })
+        card.addEventListener('mouseenter',function(e){
+
+       	      card.style.transform='none';
+       	      let z=100;let x=-45;let s=200;
+       	      title.style.transform=`translateZ(${z}px)`;
+       	     shoe.style.transform="translate3d(-100px,-100px,100px) rotateZ(-35deg)";
+
+       })
+
+
+         card.addEventListener('mouseleave',function(e){
+       	       let x= 0;
+       	       let y=0;
+       	       card.style.transform=`rotateY(${y}deg) rotateX(${x}deg)`;
+       	       title.style.transform="translateZ(0px)";
+       	       shoe.style.transform="translateZ(0px)  rotate(0deg)";
+       	       shoe.style.transform="translate(-50%,-50%)";
+
+       })
+
+
+
+    </script>
+</body>
+</html>

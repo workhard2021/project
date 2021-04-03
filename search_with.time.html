@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search with Time</title>
+
+	<style type="text/css">
+
+		  body{
+		  	  
+		  	  background:black;
+		  }
+		  .container{
+		  	  position:absolute;
+		  	  top:50%;
+		  	  left:50%;
+		  	  transform:translate(-50%,-50%);
+		  	   display:flex;
+		  	   justify-content:flex-start;
+		  	   align-items:center;
+		  	   flex-direction:column;
+		  	   width:90%;
+		  	   overflow:hidden;
+           }
+           .form-field{
+           	   display:flex;
+           	   justify-content:flex-start;
+           	   align-items:center;
+           	   flex-direction:row;
+           	   width:100%;
+           	   margin:0%; 
+
+           }
+           .container h1{
+           	   position:relative;
+           	   width:100%;
+           	   text-align:center;
+           	   background:black;
+           	   color:white;
+           }
+           .form-field input{
+           	   position:relative;
+           	   width:50%;height:30px;
+           	   margin:auto;
+           	   font-size:20px;
+           	   outline: none;
+           	   color:olive;
+           	   border-radius:5px;
+           	   padding-left:10px;
+
+           }
+           ::placeholder{
+           	   color:grey;
+           	   font-size:18px;
+           	   padding-left:10px;
+           }
+           .form-field .btn{
+           	   border:none;
+           	   border-radius:5px;
+           	   color:white;
+           	   font-size:17px;
+           	   width:100px;height:30px;
+           	   position:relative;
+           	   left:-10%; 
+           	   cursor:pointer;
+           	   background:#FF5050;
+           }
+
+           .time {
+
+           	   margin:auto;
+           	   display:flex;
+           	   justify-content:center;
+           	   align-items:center;
+           	   flex-direction:row;
+           	   width:100%;height:auto; 
+
+
+           }
+
+           .time span{
+           	  width:60px;height:60px;
+           	  border-radius:50%;
+           	  font-size:20px;
+           	  display:block;
+           	  color:white;
+           	  background:grey;
+           	  display:flex;
+           	  justify-content:center;
+           	  align-items:center;
+           	  flex-direction:column;
+           	  padding:10px;
+           }
+
+           .time  div{
+           	  position:relative;
+           	   display:flex;
+           	   justify-content:center;
+           	   align-items:center;
+           	   flex-direction:column;
+           	   margin:20px;
+           }
+           .
+           .time small{
+           	   color:grey;
+           	   display:block;
+           }
+
+           .time span ::before{
+
+           	  content: ':';
+           	  position:absolute;
+           	  color:grey;
+           	  font-size:40px;
+           	  width:10px;
+           	  left:-30%;
+           	  top:15px;
+           }
+
+
+           .time .day ::before{
+
+           	  content: '';
+           	  position:absolute;
+           }
+
+
+
+
+
+	</style>
+</head>
+<body>
+	 <div class="container">
+	 	  <h1>Search with Time</h1>
+	 	  <form class="form-field">
+	 	  	 <input type="text" name="search" class="search" placeholder="Search">
+	 	  	 <button class="btn">SERACH </button>
+	 	  </form>
+
+	 	   <div class='time'>
+	 	   	   
+	 	   	<div>
+	 	   	  <span class="day"> 8 <small>Days</small></span>
+	 	   	 </div>
+	 	   	 	
+	 	   	 <div>
+	 	  	  <span class="hour">1  <small>Hours</small></span>
+	 	   	 </div>
+	 	   	  
+	 	   	 <div>
+	 	   	  <span class="minute">56  <small>Minutes</small></span>
+	 	   	 </div>
+	 	   	
+	 	   	<div>
+	 	   	  <span class="seconde">18  <small>Secondes</small></span>
+	 	   	</div>
+	 	   </div>
+	 </div>
+
+
+	 <script type="text/javascript">
+	 	
+       
+
+         const btn=document.querySelector('.btn');
+         //const text=document.querySelector('.search').innerHTML;
+        
+         btn.onclick=((e)=>{
+         	     alert('Merci de votre visite');
+         });
+
+
+	 	 setInterval(()=>{
+					 	const day=document.querySelector('.day');
+					 	const hour=document.querySelector('.hour');
+					    const minute=document.querySelector('.minute');
+					 	const seconde=document.querySelector('.seconde');
+				         
+				       date = new Date();
+
+					   
+
+					   const dy=date.getDay();
+					   const hr=date.getHours();
+					   const mn=date.getMinutes();
+					   const sc=date.getSeconds();
+
+
+					     day.innerHTML=dy+'<br> <small>Days</small>';
+
+					     hour.innerHTML=hr +'<br> <small>Hours</small>';
+
+					     minute.innerHTML=mn +'<br> <small>Minutes</small>';
+					     seconde.innerHTML=sc+'<br/> <small>Seconds</small>';
+
+		},1000);
+          
+
+
+
+	 </script>
+      
+</body>
+</html>
