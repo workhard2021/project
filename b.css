@@ -1,0 +1,117 @@
+.title{
+     position:absolute;
+     top:50%;
+     left:50%;
+     transform: translate(-50%,-50%);
+     width:90%;
+}
+div {
+     position:relative;
+    
+}
+ul{
+    list-style:none;
+    
+}
+ul li{
+     font-size:0.9em;
+}
+h3{
+     font-size:1em;
+}
+h4{
+     font-size:1em;
+}
+h5{
+    font-size:0.9em;
+    color:grey;
+}
+.item_urgence{
+     height:60px;
+     width:70%;
+}
+.item_urgence span{
+     font-size:2em;
+     width:50px;
+     text-align:center;
+     color:grey;
+}
+
+.item_urgence div{
+     font-size:0.9em;
+}
+
+.reseau a{
+     display:flex;
+     width:50px;
+     height:50px;
+     border-radius:50px;
+     border:1px solid grey;
+     background-color:aliceblue; 
+     color:grey; 
+     margin:auto 8px; 
+     text-decoration: none;
+}
+.reseau a i{
+     margin:auto;
+     font-size:1.4em;
+}
+.footer ul li a{
+     text-decoration:none;
+     color:black;
+     font-size:1em;
+}
+#Copyright{
+     color:grey;
+}
+/* logo  */
+.logo_comment{
+    position:absolute;
+    top:50%;
+    left:30%;
+    transform: translate(-50%,-50%);
+    width:60%;
+    z-index:1;
+}
+.logo_comment h2{ 
+
+     color:black;
+}
+.logo_comment h3{ 
+  
+    color:rgb(243, 243, 243);
+}
+.img{
+     object-fit:fill;
+     filter:saturate(1.2);
+}
+.menu a{
+    text-decoration: none;
+    color:black; 
+    box-sizing:border-box;  
+}
+.menu a i{
+     color:grey;
+     display:inline-block;
+     margin-right:8px;
+}
+.menu_{
+     height:70px;
+     box-shadow:0px 0px 5px whitesmoke;
+}
+
+.urgence{
+     background: rgb(240, 140, 156);
+}
+.menu a,.menu #search i{
+     transition: all 0.6s;
+}
+.menu a:hover{
+     background-color:white;
+}
+.menu #search:hover{
+     background:none;
+}
+.menu #search:hover  .far{
+    color:red;
+}
