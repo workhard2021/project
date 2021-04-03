@@ -96,7 +96,7 @@ h5{
      margin-right:8px;
 }
 .menu_{
-     height:auto;
+     height:70px;
     /* // box-shadow:0px 0px 5px whitesmoke; */
 }
 
@@ -121,6 +121,7 @@ h5{
 @media screen and (max-width:700px){
        .menu_{
              flex-wrap: wrap;
+             height:90px;
        }
        .menu_ img{
             height:20px;
