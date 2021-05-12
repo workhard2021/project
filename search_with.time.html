@@ -5,30 +5,25 @@
 
 	<style type="text/css">
 
-		  body{
-		  	  
-		  	  background:black;
-		  }
 		  .container{
-		  	  position:absolute;
-		  	  top:50%;
-		  	  left:50%;
-		  	  transform:translate(-50%,-50%);
+		  	   position:absolute;
+		  	   top:50%;
+		  	   left:50%;
+		  	   transform:translate(-50%,-50%);
 		  	   display:flex;
-		  	   justify-content:flex-start;
+		  	   justify-content:space-evenly;
 		  	   align-items:center;
 		  	   flex-direction:column;
 		  	   width:90%;
 		  	   overflow:hidden;
-           }
+            }
            .form-field{
            	   display:flex;
-           	   justify-content:flex-start;
+           	   justify-content:center;
            	   align-items:center;
            	   flex-direction:row;
            	   width:100%;
-           	   margin:0%; 
-
+           	   margin:auto;   
            }
            .container h1{
            	   position:relative;
@@ -66,22 +61,21 @@
            }
 
            .time {
-
            	   margin:auto;
            	   display:flex;
            	   justify-content:center;
            	   align-items:center;
            	   flex-direction:row;
            	   width:100%;height:auto; 
-
-
+			   flex-wrap:wrap;
+			   margin:2em auto;
            }
 
            .time span{
-           	  width:60px;height:60px;
+			  position:relative;
+           	  width:5em;height:5em;
            	  border-radius:50%;
-           	  font-size:20px;
-           	  display:block;
+           	  font-size:1.2em;
            	  color:white;
            	  background:grey;
            	  display:flex;
@@ -89,33 +83,20 @@
            	  align-items:center;
            	  flex-direction:column;
            	  padding:10px;
-           }
+			  box-sizing:border-box;
+			  margin:auto;
 
-           .time  div{
-           	  position:relative;
-           	   display:flex;
-           	   justify-content:center;
-           	   align-items:center;
-           	   flex-direction:column;
-           	   margin:20px;
-           }
-           .
-           .time small{
-           	   color:grey;
-           	   display:block;
            }
 
            .time span ::before{
-
            	  content: ':';
            	  position:absolute;
            	  color:grey;
            	  font-size:40px;
            	  width:10px;
-           	  left:-30%;
+           	  left:-100%;
            	  top:15px;
            }
-
 
            .time .day ::before{
 
@@ -123,7 +104,41 @@
            	  position:absolute;
            }
 
+        @media screen and (max-width:750px) {
+		
+			
+			small{
+				 font-size:1em;
+				 
+			}
+			.time span{
+			  position:relative;
+           	  width:4em;height:4em;
+			  font-size:1em;
+		   }
 
+		   .time span ::before{
+           	  content: '';
+			
+			}
+			.form-field input{
+           	   position:relative;
+           	   width:50%;height:30px;
+           	   margin:auto;
+           	   font-size:20px;
+           	   outline: none;
+           	   color:olive;
+           	   border-radius:5px;
+           	   padding-left:10px;
+				  
+           }
+		   .form-field .btn{
+           	   font-size:14px;
+           	   width:80px;height:30px;
+           	   left:-5%; 
+           }
+			
+		}
 
 
 
@@ -131,29 +146,29 @@
 </head>
 <body>
 	 <div class="container">
-	 	  <h1>Search with Time</h1>
+	 	  <h1>Barre de recherche</h1>
 	 	  <form class="form-field">
 	 	  	 <input type="text" name="search" class="search" placeholder="Search">
-	 	  	 <button class="btn">SERACH </button>
+	 	  	 <button class="btn">Search</button>
 	 	  </form>
 
 	 	   <div class='time'>
 	 	   	   
-	 	   	<div>
-	 	   	  <span class="day"> 8 <small>Days</small></span>
-	 	   	 </div>
+	 	    
+	 	   	  <span class="day dot"> 8 <small >Days</small></span>
+	 	   	 
 	 	   	 	
-	 	   	 <div>
-	 	  	  <span class="hour">1  <small>Hours</small></span>
-	 	   	 </div>
+	 	   	 
+	 	  	  <span class="hour dot">1  <small>Hours</small></span>
+	 	   	 
 	 	   	  
-	 	   	 <div>
-	 	   	  <span class="minute">56  <small>Minutes</small></span>
-	 	   	 </div>
+	 	   	 
+	 	   	  <span class="minute dot">56  <small>Minutes</small></span>
+	 	   	 
 	 	   	
-	 	   	<div>
-	 	   	  <span class="seconde">18  <small>Secondes</small></span>
-	 	   	</div>
+	 	   	
+	 	   	  <span class="seconde dot">18  <small>Secondes</small></span>
+	 	   	
 	 	   </div>
 	 </div>
 

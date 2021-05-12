@@ -9,16 +9,16 @@
 
 	  <style type="text/css">
 	  	  .wrapper_reseau{
-	  	  	   position:absolute;
-	  	  	   top:50%;
-	  	  	   left:50%;
-	  	  	   transform:translate(-50%,-50%);
-	  	  	   background:black;
-	  	  	   width:100%;
-	  	  	   height:100%;
-	  	  	   display:flex;
-	  	  	   justify-content:center;
-	  	  	   align-items:center;
+			  display:flex;
+			  justify-content:center;
+			  align-items:center;
+			  flex-wrap:wrap;
+			  width:100%;
+			  height:100%;
+			  position:absolute;
+			  top:50%;
+			  transform:translate(0%,-50%);
+			  box-sizing:border-box;
 	  	  }
 	  	  .wrapper_reseau .btn{
 	  	  	     position:relative;
@@ -27,9 +27,10 @@
 	  	  	     align-items:center;
 	  	  	     flex-wrap:wrap;
 	  	  	     margin:auto;
-	  	  	     width:50%;
+	  	  	     width:80%;
 	  	  	     height:50%;
 	  	  }
+			
 	  	  .wrapper_reseau .btn a{
 	  	  	  display:block;
 	  	  	  text-decoration:none;
@@ -42,6 +43,9 @@
 	  	  	  position:relative;z-index:9;
 	  	  	  transition:all 0.5s;
 	  	  }
+		  .wrapper_reseau .btn i{
+			font-size:1.5em;
+		  }
 	  	  
 	  	  
 	  	   .wrapper_reseau .lot{
@@ -53,9 +57,10 @@
 	  	   	   font-size:14px;
 	  	   	   color:black;
 	  	   	   display:inline-block;
-	  	   	   background:red;
+	  	   	   background:rgb(235, 229, 229);
 	  	   	   padding:10px 15px;
 	  	   	   border-radius:15px;
+			   font-size:16px;
 	  	   	   transition:all 0.9s ease-out;
 	  	    }
 	  	     .wrapper_reseau .lot:before{
@@ -63,32 +68,41 @@
 	  	   	  position:absolute;
 	  	   	  top:95%;
 	  	   	  left:50%;
-	  	   	  color:red;
+	  	   	  color:rgb(235, 229, 229);
 	  	   	  transform:translate(-50%,-50%)  skewX(30deg) skewY(30deg);
 	  	   	  display:block;
 	  	   	  width:10px;
 	  	   	  opacity:1;
-	  	   	  background:red;
-	  	   	  transition:all 0.8s ease-out;
+	  	   	  background:rgb(235, 229, 229);
+			  transition:all 0.5s;
+	  	   	  
 	  	   }
 
 	  	    .wrapper_reseau a:hover  .lot,.wrapper_reseau a:hover  .lot:before{
 	  	    	opacity:1;
-
+				
 	  	    }
 	  	     .wrapper_reseau a:nth-child(1){
-	  	     	 background:blue;
+	  	     	 background:rgb(138, 210, 238);
 	  	     }
 	  	      .wrapper_reseau a:nth-child(2){
 	  	     	 background:grey;
 	  	     }
 	  	      .wrapper_reseau a:nth-child(3){
-	  	     	 background:red;
+	  	     	 background:rgb(219, 199, 157);
 	  	     }
+		  h2{
+            text-align:center;
+			font-size:1.2em;
+			padding:5px;
+			box-sizing:border-box;
+			text-transform: uppercase;
+		   }
 	  </style>
 
 </head>
 <body>
+	<h2>Reseaux sociaux</h2>
 	<div class="wrapper_reseau">
 		  <div class="btn">
 		  	 <a href="#"> <span class="facebook lot"> Facebook</span> <i class="fab fa-facebook-square"></i></a>

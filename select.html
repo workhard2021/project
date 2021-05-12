@@ -27,6 +27,7 @@
 			 justify-content:flex-start;
 			 align-items:center;
 			 flex-direction:column;
+			 width:100%;
 		}
 
 		.form-field h2{
@@ -100,8 +101,13 @@
        	  cursor:pointer;
        	  font-size:17px;
        	  background:#097372;
+			color:white;
+			transition:all 0.5s;
 
        }
+	   .btn:hover{
+		    color: black;
+	   }
 
        .item input[type='radio']{
        	  display:none;
@@ -116,7 +122,15 @@
        #select-1:checked ~ .option-1 .dot::before,#select-2:checked ~ .option-2 .dot::before,
        #select-3:checked ~ .option-3 .dot:before,#select-4:checked ~ .option-4 .dot::before{
        	  background:#097372;
-       }      
+       } 
+      
+	   @media screen and (max-width:750px) {
+		.center{
+			  left:50%;	 
+			   width:90%; 
+
+			}
+	   }     
 
 
 
@@ -128,9 +142,9 @@
 	</style>
 </head>
 <body>
-
+    
 	 <div class="center">
-
+      
 	 	 <form class="form-field">
              <h2>SELECT ONE OPTION</h2>
 	 	 	 <div class="item">
