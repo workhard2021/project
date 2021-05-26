@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="image/f4.webp">
+    <script src="https://kit.fontawesome.com/7a201a122f.js"></script>
+    <title>flexecode</title>
+ 
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./index.js"></script>
+  
+</head>
+<body>
+   <header id="menu">
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="#acceuil">
+              <span>Shopping</span>
+              <img  width="30" src="image/logo3.png" alt="..."/>
+          </a>
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse d-lg-flex" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto"> 
+                <li class="nav-item active">
+                     <a class="nav-link px-3" href="#femme">Femme</a><span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="#enfant">Enfant</a></a>
+                </li>
+                <li class="nav-item">
+                     <a class="nav-link px-3" href="#homme">Homme</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="#collection_femme">Collection</a></a>
+                </li>
+            </ul>
+            <ul class="navbar-nav m-auto">
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-3"><i class="fas fa-search"></i></a>
+                </li>
+                <li class="nav-item">
+                     <a class="nav-link px-3" href="#contact"><i class="fas fa-map-marker-alt"></i></a>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+   </header>
+   <div>
+   <div id="acceuil" class="ancre"></div>
+    <main>
+        <!-- COLLECTION FEMME -->
+       <section>
+           <div class="ancre" id="collection_femme"></div>
+           <article class="collection">
+           <div class="image_collection w-100">
+             <video autoplay muted>
+                <source src="video/video2.mp4" type="video/mp4">
+             </video>
+           </div>
+           <div class="item_collection_1  mx-4">Collection pour femme/homme</div>
+           <h3 class="item_collection_1   mx-4">Nouvelle collection</h3>
+           <h4 class="item_collection_2 bg-info mx-4" >hommes / femmes</h4>
+           <div class="item_collection_3  d-flex flex-row  justify-content-center align-items-center  flex-wrap">
+              
+               <div class="col-8 col-sm-6 col-md-3 m-2">
+                    <div class="image_item_collection_3">
+                         <img src="image/f1.jpg" alt="..."/>
+                    </div>
+                     <a href="#" class="title_item_collection_3 py-3 d-block">collection 1</a>
+                </div>
+                <div class="col-8 col-sm-6 col-md-3 m-2">
+                    <div class="image_item_collection_3">
+                         <img src="image/p5.jpg" alt="..."/>
+                    </div>
+                     <a href="#"  class="title_item_collection_3 py-3 d-block">collection 2</a href="#" >
+                </div>
+                <div class="col-8 col-sm-6 col-md-3 m-2">
+                    <div class="image_item_collection_3">
+                         <img src="image/e8.jpg" alt="..."/>
+                    </div>
+                     <a href="#"  class="title_item_collection_3 py-3 d-block">collection 3</a href="#" >
+                </div>
+                <div class="col-8 col-sm-6 col-md-3 m-2">
+                    <div class="image_item_collection_3">
+                         <img src="image/f4.jpg" alt="..."/>
+                    </div>
+                     <a  href="#"  class="title_item_collection_3 py-3 d-block">collection 4</a>  
+                </div>
+           </div>
+           </article>
+       </section>
+
+      <!--enfant-->
+      <section>
+        <div class="ancre" id="enfant"></div>
+        <article class="article_collection d-flex flex-row  justify-content-center align-items-center flex-wrap">   
+               <h3 class="text-secondary w-100 p-4">Collections pour enfant</h3> 
+               <div class="col-8 col-sm-6 col-md-3 p-4">
+                    <a href="model_femme"  class="dot">
+                        <img src="/image/e1.jpg" class="img-fluid img" alt="Responsive image">
+                        <div class="nbr_couleur p-1 text-secondary"> + 34 couleur</div>
+                    </a>
+                    <h4 class="text-secondary">Creer votre polo</h4>
+                    <p><a href="model_femme" class="text-secondary">Vente des habits homme de genre</a></p>
+                </div> 
+
+                <div class="col-8 col-sm-6 col-md-3 p-4">
+                    <a href="model_femme"  class="dot">
+                        <img src="/image/e9.jpg" class="img-fluid img" alt="Responsive image">
+                        <div class="nbr_couleur p-1 text-secondary"> + 8 couleur</div>
+                    </a>
+                    <h4 class="text-secondary">Creer votre polo</h4>
+                    <p><a href="model_femme" class="text-secondary">Vente des habits homme</a></p>
+                </div> 
+                <div class="col-8 col-sm-6 col-md-3 p-4">
+                    <a href="model_femme"  class="dot">
+                        <img src="/image/e2.jpg" class="img-fluid img" alt="Responsive image">
+                        <div class="nbr_couleur p-1 text-secondary"> + 14 couleur</div>
+                    </a>
+                    <h4 class="text-secondary">Creer votre polo</h4>
+                    <p><a href="model_femme" class="text-secondary">Vente des  habits homme</a></p>
+                </div> 
+
+                <div class="col-8 col-sm-6 col-md-3 p-4">
+                    <a href="model_femme"  class="dot">
+                        <img src="/image/e3.jpg" class="img-fluid img" alt="Responsive image">
+                        <div class="nbr_couleur p-1 text-secondary"> + 24 couleur</div>
+                    </a>
+                    <h4 class="text-secondary">Creer votre polo</h4>
+                    <p><a href="model_femme" class="text-secondary">Vente des habits homme</a></p>
+                </div> 
+
+                <div class="col-8 col-sm-6 col-md-3 p-4">
+                    <a href="model_femme"  class="dot">
+                        <img src="/image/e4.jpg" class="img-fluid img" alt="Responsive image">
+                        <div class="nbr_couleur p-1 text-secondary"> +19 couleur</div>
+                    </a>
+                    <h4 class="text-secondary">Creer votre polo</h4>
+                    <p><a href="model_femme" class="text-secondary">Vente des habits homme</a></p>
+                </div> 
+                <div class="col-8 col-sm-6 col-md-3 p-4">
+                    <a href="model_femme"  class="dot">
+                        <img src="/image/e7.jpg" class="img-fluid img" alt="Responsive image">
+                        <div class="nbr_couleur p-1 text-secondary"> + 8 couleur</div>
+                    </a>
+                    <h4 class="text-secondary">Creer votre polo</h4>
+                    <p><a href="model_femme" class="text-secondary">Vente des habits homme</a></p>
+                </div> 
+
+                <div class="col-8 col-sm-6 col-md-3 p-4">
+                    <a href="model_femme"  class="dot">
+                        <img src="/image/e5.jpg" class="img-fluid img" alt="Responsive image">
+                        <div class="nbr_couleur p-1 text-secondary"> + 8 couleur</div>
+                    </a>
+                    <h4 class="text-secondary">Creer votre polo</h4>
+                    <p><a href="model_femme" class="text-secondary">Vente des habits homme</a></p>
+                </div> 
+                <div class="col-8 col-sm-6 col-md-3 p-4">
+                    <a href="model_femme"  class="dot">
+                        <img src="/image/e6.jpg" class="img-fluid img" alt="Responsive image">
+                        <div class="nbr_couleur p-1 text-secondary"> + 8 couleur</div>
+                    </a>
+                    <h4 class="text-secondary">Creer votre polo</h4>
+                    <p><a href="model_femme" class="text-secondary">Vente des habits homme</a></p>
+                </div> 
+                <div class="col-8 col-sm-6 col-md-3 p-4">
+                    <a href="model_femme"  class="dot">
+                        <img src="/image/e8.jpg" class="img-fluid img" alt="Responsive image">
+                        <div class="nbr_couleur p-1 text-secondary"> + 8 couleur</div>
+                    </a>
+                    <h4 class="text-secondary">Creer votre polo</h4>
+                    <p><a href="model_femme" class="text-secondary">Vente des habits homme</a></p>
+                </div> 
+        </article>
+    </section>
+       <!-- SECTION VIDEO-->
+        <section>
+              <article class="info d-flex flex-row  justify-content-center align-items-center flex-wrap" >
+                  <div class="dot_info col-12 col-md-7 px-md-5">
+                      <video autoplay muted>
+                         <source src="video/video3.mp4" type="video/mp4">
+                      </video>
+                  </div>
+                  <div class="dot_info col-12 col-md-5 px-5 d-flex flex-row justify-content-center align-items-center flex-wrap"> 
+                      <div>
+                        <div class="text-dark title_info">L'été en libérté</div>
+                        <p class="text-secondary">La fraîcheur d'un nouveau style estival</p>
+                        <a href="#" class="px-5 py-3 link_info">Explorez</a>
+                      </div>
+                  </div>
+
+              </article>
+         </section>
+
+         <!-- femme -->
+         <section>
+            <div class="ancre" id="femme"></div>
+            <article class="article_collection d-flex flex-row  justify-content-center align-items-center flex-wrap">   
+                   <h3 class="text-secondary w-100 p-4">Collections pour femme</h3> 
+                   <div class="col-8 col-sm-6 col-md-3 p-4">
+                        <a href="model_femme"  class="dot">
+                            <img src="/image/f1.jpg" class="img-fluid img" alt="Responsive image">
+                            <div class="nbr_couleur p-1 text-secondary"> + 23 couleur</div>
+                        </a>
+                        <h4 class="text-secondary">Creer votre polo</h4>
+                        <p><a href="model_femme" class="text-secondary">Vente des habits femme</a></p>
+                    </div> 
+
+                    <div class="col-8 col-sm-6 col-md-3 p-4">
+                        <a href="model_femme"  class="dot">
+                            <img src="/image/f6.jpg" class="img-fluid img" alt="Responsive image">
+                            <div class="nbr_couleur p-1 text-secondary"> + 10 couleur</div>
+                        </a>
+                        <h4 class="text-secondary">Creer votre polo</h4>
+                        <p><a href="model_femme" class="text-secondary">Vente des habits femme</a></p>
+                    </div> 
+
+                    <div class="col-8 col-sm-6 col-md-3 p-4">
+                        <a href="model_femme"  class="dot">
+                            <img src="/image/f3.jpg" class="img-fluid img" alt="Responsive image">
+                            <div class="nbr_couleur p-1 text-secondary"> + 24 couleur</div>
+                        </a>
+                        <h4 class="text-secondary">Creer votre polo</h4>
+                        <p><a href="model_femme" class="text-secondary">Vente des habits femme</a></p>
+                    </div> 
+
+                    <div class="col-8 col-sm-6 col-md-3 p-4">
+                        <a href="model_femme"  class="dot">
+                            <img src="/image/f5.jpg" class="img-fluid img" alt="Responsive image">
+                            <div class="nbr_couleur p-1 text-secondary"> + 23 couleur</div>
+                        </a>
+                        <h4 class="text-secondary">Creer votre polo</h4>
+                        <p><a href="model_femme" class="text-secondary">Vente des habits femme</a></p>
+                    </div> 
+
+                    <div class="col-8 col-sm-6 col-md-3 p-4">
+                        <a href="model_femme"  class="dot">
+                            <img src="/image/f7.jpg" class="img-fluid img" alt="Responsive image">
+                            <div class="nbr_couleur p-1 text-secondary"> + 19 couleur</div>
+                        </a>
+                        <h4 class="text-secondary">Creer votre polo</h4>
+                        <p><a href="model_femme" class="text-secondary">Vente des habits femme</a></p>
+                    </div> 
+            </article>
+    </section>
+
+    </section>
+    <!-- SECTION VIDEO-->
+     <section>
+           <article class="info d-flex flex-row  justify-content-center align-items-center flex-wrap" >
+               <div class="dot_info col-12 col-md-7 px-md-5">
+                   <video autoplay muted>
+                      <source src="video/video1.mp4" type="video/mp4">
+                   </video>
+               </div>
+               <div class="dot_info col-12 col-md-5 px-5 d-flex flex-row justify-content-center align-items-center flex-wrap"> 
+                   <div>
+                     <div class="text-dark title_info">L'été en libérté</div>
+                     <p class="text-secondary">La fraîcheur d'un nouveau style estival</p>
+                     <a href="#" class="px-5 py-3 link_info">Explorez</a>
+                   </div>
+               </div>
+
+           </article>
+      </section>
+
+      <!-- homme-->
+      <section>
+         <div class="ancre" id="homme"></div>
+         <article class="article_collection d-flex flex-row  justify-content-center align-items-center flex-wrap">   
+                <h3 class="text-secondary w-100 p-4">Collections pour homme</h3> 
+                <div class="col-8 col-sm-6 col-md-3 p-4">
+                     <a href="model_femme"  class="dot">
+                         <img src="/image/p10.jpg" class="img-fluid img" alt="Responsive image">
+                         <div class="nbr_couleur p-1 text-secondary"> + 34 couleur</div>
+                     </a>
+                     <h4 class="text-secondary">Creer votre polo</h4>
+                     <p><a href="model_femme" class="text-secondary">Vente des habits homme de genre</a></p>
+                 </div> 
+
+                 <div class="col-8 col-sm-6 col-md-3 p-4">
+                     <a href="model_femme"  class="dot">
+                         <img src="/image/p6.jpg" class="img-fluid img" alt="Responsive image">
+                         <div class="nbr_couleur p-1 text-secondary"> + 14 couleur</div>
+                     </a>
+                     <h4 class="text-secondary">Creer votre polo</h4>
+                     <p><a href="model_femme" class="text-secondary">Vente des  habits homme</a></p>
+                 </div> 
+
+                 <div class="col-8 col-sm-6 col-md-3 p-4">
+                     <a href="model_femme"  class="dot">
+                         <img src="/image/p8.jpg" class="img-fluid img" alt="Responsive image">
+                         <div class="nbr_couleur p-1 text-secondary"> + 24 couleur</div>
+                     </a>
+                     <h4 class="text-secondary">Creer votre polo</h4>
+                     <p><a href="model_femme" class="text-secondary">Vente des habits homme</a></p>
+                 </div> 
+
+                 <div class="col-8 col-sm-6 col-md-3 p-4">
+                     <a href="model_femme"  class="dot">
+                         <img src="/image/p5.jpg" class="img-fluid img" alt="Responsive image">
+                         <div class="nbr_couleur p-1 text-secondary"> +19 couleur</div>
+                     </a>
+                     <h4 class="text-secondary">Creer votre polo</h4>
+                     <p><a href="model_femme" class="text-secondary">Vente des habits homme</a></p>
+                 </div> 
+
+                 <div class="col-8 col-sm-6 col-md-3 p-4">
+                     <a href="model_femme"  class="dot">
+                         <img src="/image/p7.jpg" class="img-fluid img" alt="Responsive image">
+                         <div class="nbr_couleur p-1 text-secondary"> + 8 couleur</div>
+                     </a>
+                     <h4 class="text-secondary">Creer votre polo</h4>
+                     <p><a href="model_femme" class="text-secondary">Vente des habits homme</a></p>
+                 </div> 
+         </article>
+     </section>
+       
+    </main>
+    <footer>
+        <div class="ancre" id="contact"></div>
+        <div class="d-flex flex-row justify-content-center align-items-center flex-wrap">
+            <section class="py-0 item_footercol-12 col-md-6">
+               <h4 class="text-center w-100 text-secondary  item_footer py-2">Restez informer de nos bons plans et nouveautés</h4>
+                <form class="d-flex justify-content-center">
+                  <div class="form-group col-10 col-md-6 px-3" id="input_block">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                  <button type="submit" id="btn" class="btn text-secondary btn-light">Enregistrer</button>
+                </form>
+            </section>
+            <section class=" py-2 col-12 col-md-6  d-flex flex-row justify-content-center align-items-center flex-wrap">
+                
+                <div class="item_footer  col-6 col-12  d-flex flex-row justify-content-center align-items-center flex-wrap">
+                      <div class="d-flex  flex-column justify-content-center align-items-center flex-wrap m-auto">
+                        <div class="m-auto w-100 p-1 title_footer">A propops de nous</div>
+                        <a class="d-block tx w-100 my-auto p-1 text-secondary"  href="#">club </a> 
+                        <a class="d-block w-100 my-auto p-1 text-secondary"  href="#">notre groupe</a>
+                        <a class="d-block w-100 my-auto p-1 text-secondary"  href="#">protéction de la marque</a>  
+                      </div>
+                      <div class="d-flex  flex-column justify-content-center align-items-center flex-wrap m-auto">
+                        <div class="m-auto w-100 p-1 title_footer">Nos Catégories</div>
+                        <a class="d-block tx w-100 my-auto p-1 text-secondary"  href="#">collection homme</a> 
+                        <a class="d-block w-100 my-auto p-1 text-secondary"  href="#">collection femme</a>
+                        <a class="d-block w-100 my-auto p-1 text-secondary"  href="#">collection</a>  
+                      </div>
+                    </div>
+              </div>
+            </section>
+        </div>
+        <section class="col-md-10 col-11 m-auto">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106376.72692351088!2d-7.657032800517269!3d33.57226777563456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7cd4778aa113b%3A0xb06c1d84f310fd3!2sCasablanca!5e0!3m2!1sfr!2sma!4v1621871234063!5m2!1sfr!2sma" class="w-100" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+        <section class="py-3  d-flex flex-row justify-content-center align-items-center flex-wrap">
+            <a href="#" class="d-block col-md-2 col-4 text-center text-secondary">Plan de site</a>
+            <a href="#" class="d-block col-md-2 col-4 text-center text-secondary">Guide des detailles</a>
+            <a href="#" class="d-block col-md-2 col-4 text-center text-secondary">Credits</a>
+            <a href="#" class="d-block col-md-2 col-4 text-center text-secondary">Confidentialité</a>
+            <a href="#" class="d-block col-md-2 col-4 text-center text-secondary">Maroc</a>
+       </section>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,177 @@
+/*header  */
+*{
+    padding:0px;
+    margin:0px;
+    font-family:sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+div.ancre{
+    position: relative;
+    top:-80px;
+}
+.crl img{
+     height:350px;
+     position:relative;
+}
+
+#menu{
+    width:100%;
+    height:auto;
+    position:fixed;
+    z-index:999;
+    line-height:70px;
+}
+/* COLLECTION FEMME*/
+.image_collection{
+    position:relative;
+    height:500px;
+}
+.collection img{
+   position:absolute;
+   width:100%;
+   height:100%;
+   object-fit:cover;
+}
+.item_collection_1{
+    position:relative;
+    bottom:350px; 
+}
+.item_collection_2{
+   position:relative;
+   bottom:250px; 
+   color:white;
+   display:inline-block; 
+}
+.item_collection_3{
+   position:relative;
+   bottom:200px; 
+}
+
+.image_item_collection_3{
+    height:420px;
+    position:relative;
+}
+.item_collection_3 img{
+   position:absolute;
+   width:100%;
+   height:100%;
+   object-fit:cover;
+}
+.title_item_collection_3{
+   position:relative;
+   color:white;
+   z-index:9;
+   text-decoration:none;
+   text-transform: capitalize;
+   color:white;
+   background-color:black;
+   top:100%;
+   font-size:1.4em;
+   text-align:center;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.title_item_collection_3:hover{
+   color:gray;
+}
+/* SECTION VIDEO */
+.dot_info{
+    position:relative;
+    height:400px;
+}
+ video{
+    position:absolute;
+     width:100%;
+     height:100%;
+     object-fit:cover;
+}
+.dot_info .title_info{
+    font-size:1.5em;
+}
+.dot_info .link_info{
+     text-decoration:none;
+     background-color:black;
+     color:white;
+     border-radius:10px;
+     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.dot_info .link_info:hover{
+    color:black;
+    background-color: grey;
+}
+
+/* section femme */
+.article_collection .item{
+    position:relative; 
+    width:18rem;
+ }
+
+
+.article_collection .dot{
+    position:relative;
+    height:400px;
+    width:100%;
+    box-sizing:border-box;
+    display: inline-block;  
+}
+
+.article_collection .img{
+     position: relative;
+     width:100%;
+     height:100%;
+     object-fit:cover;
+     filter:saturate(1.2);
+}
+
+.article_collection .nbr_couleur{
+    position:absolute;
+    top:80%;
+    left:2%;
+    z-index:2;
+    background-color:white;
+ }
+ .article_collection >div p a{
+     text-decoration:none;
+
+ }
+.article_collection >div:hover a{
+    text-decoration:underline;
+    display:inline-block;
+}
+
+/* foooter */
+footer{
+    background-color:whitesmoke;
+}
+
+footer a{
+     text-decoration:none;
+     font-size:1em;
+}
+footer a:hover{
+    text-decoration:underline;
+}
+.title_footer{
+     font-size:1em;
+     color:gray;
+     letter-spacing:1.2px;
+}
+ #btn{
+     border-radius:10px;
+     border:1px solid solid;
+     background-color:white 
+}
+#btn:hover{
+    background-color:rgba(0,0,0,0.2);
+
+}
+#exampleInputEmail1:hover{
+     border:1px solid black;
+     border-style: dashed;
+}
+
+
+
+
+
