@@ -5,109 +5,113 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-     <style>
+    <style>
+      #container{
+            position:absolute;
+            left:50%;
+            top:50%;
+            transform:translate(-50%,-50%);
+            width:25em;
+            background-color:rgb(27, 27, 27);
+            box-shadow: 2px 2px 1px rgb(228, 220, 220);
+            border-radius:5px;
+      }
+     #container .affichage{
+            width:95%;
+            position:relative;
+            height:150px;
+            margin:auto;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            font-size:3em;
+            color:white;
+
+     }
+     .affichage span{
+          padding-right:0.3em;
+     }
+     .fonction{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            flex-direction:column;
+            position:relative;
+            margin:auto;
+            width:95%;
+            height:350px;
+            font-size:1.3em;
+     }
+     .item_fonction{
+           position: relative;
+           margin:auto;
+           width:100%;
+           display:flex;
+           align-items:center;
+           justify-content:space-evenly;
+     }
+    .item_fonction .item{
+           position: relative;
+           margin:auto;
+           display:inline-block;
+           border-radius:50%;
+           height:50px;
+           width:50px;
+           text-align:center;
+           background-color:rgb(73, 72, 72);
+           display:flex;
+           align-items:center;
+           justify-content:center;
+           cursor:pointer;
+           color:white;
+           transition: all 0.5s;
+     } 
+     .item_fonction .item:hover{
+           background-color:gainsboro;
+     }
+     .item_fonction .item span{
+           margin:auto;
+     }
+     .item_fonction .zero{
+         flex:0.5;
+         border-radius:35%;
+         display:flex;
+         justify-content:flex-start;
+         padding-left:1em;
+         box-sizing:border-box;
+     }
+     .item_fonction .zero span{
+         margin:0px;
+     }
+     .item_fonction .yellow{
+           background-color:#e69833f5;
+     }
+    .item_fonction .white_foncer{
+         background-color: rgb(145, 143, 143);
+         color:black;
+     }
+    .precedant,.signe{
+          position:relative;
+          width:95%;
+          height:10px;
+          color:red;
+          display:none;
+     }
+   
+     @media screen and (max-width:950px) {
           #container{
-                position:absolute;
-                left:50%;
-                top:50%;
-                transform:translate(-50%,-50%);
-                width:25em;
-                background-color:rgba(27, 27,27,0.9);
-                box-shadow: 2px 2px 1px rgb(228, 220, 220);
-                border-radius:5px;
-          }
-         #container .affichage{
-                width:95%;
-                position:relative;
-                height:150px;
-                margin:auto;
-                display: flex;
-                align-items: flex-end;
-                justify-content: flex-end;
-                font-size:3em;
-                color:white;
+                width:19em;
 
-         }
-         .affichage span{
-              padding-right:0.3em;
-         }
-         .fonction{
-                display:flex;
-                align-items:center;
-                justify-content:center;
-                flex-direction:column;
-                position:relative;
-                margin:auto;
-                width:95%;
-                height:350px;
-                font-size:1.3em;
-         }
-         .item_fonction{
-               position: relative;
-               margin:auto;
-               width:100%;
-               display:flex;
-               align-items:center;
-               justify-content:space-evenly;
-         }
-          .item_fonction .item{
-               position: relative;
-               margin:auto;
-               display:inline-block;
-               border-radius:50%;
-               height:50px;
-               width:50px;
-               text-align:center;
-               background-color:gray;
-               display:flex;
-               align-items:center;
-               justify-content:center;
-               cursor:pointer;
-               color:white;
-         } 
-         .item_fonction .item span{
-               margin:auto;
-         }
-         .item_fonction .zero{
-             flex:0.5;
-             border-radius:35%;
-             display:flex;
-             justify-content:flex-start;
-             padding-left:1em;
-             box-sizing:border-box;
-         }
-         .item_fonction .zero span{
-             margin:0px;
-         }
-         .item_fonction .yellow{
-               background-color:#f3b058f5;
-         }
-        .item_fonction .white_foncer{
-             background-color: rgb(235, 235, 235);
-             color:black;
-         }
-         .precedant,.signe{
-              position:relative;
-              width:95%;
-              height:10px;
-              color:red;
-              display:none;
-         }
-         @media screen and (max-width:950px) {
-              #container{
-                    width:19em;
-
-              }  
-         }
-
-    </style>
+          } 
+     }
+  </style>
     
 </head>
 <body>
      <div id="container">
         
           <div class="affichage">
-                <span>0</span>
+                <span></span>
           </div>
           <div class="precedant">
               <span></span>
@@ -189,12 +193,12 @@
 
                                    case "+":
                                           signe.textContent+="+"+" ";
-                                          affichage.textContent="";
+                                          affichage.textContent=" ";
                                           precedant.textContent+=" ";  
                                     break;
                                     case "-":
                                           signe.textContent+="-"+" ";
-                                          affichage.textContent="";
+                                          affichage.textContent=" ";
                                           precedant.textContent+=" ";  
                                     break;
                                     case "X":
@@ -219,7 +223,7 @@
                                     break;
 
                                     case "C":
-                                         affichage.textContent=0;
+                                         affichage.textContent="";
                                          precedant.textContent="";
                                          signe.textContent="";
                                          break;
@@ -240,9 +244,9 @@
                                          signe.textContent="";
                                          break;
                                     default:
-                                          const pre=affichage.textContent=="0"?"":affichage.textContent;
-                                          affichage.textContent=pre+val; 
-                                          precedant.textContent+=pre+val;   
+                                          precedant.textContent+=val; 
+                                          affichage.textContent+=val; 
+                                            
                            }
                        
                      });
