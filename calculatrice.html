@@ -15,6 +15,7 @@
             background-color:rgb(27, 27, 27);
             box-shadow: 2px 2px 1px rgb(228, 220, 220);
             border-radius:5px;
+            font-family: Arial, Helvetica, sans-serif
       }
      #container .affichage{
             width:95%;
@@ -252,15 +253,15 @@
                                           signe.textContent="";
                                          break;
                                     default:
-                                           precedant.textContent+=val; 
+                                           precedant.textContent+=val;
                                            ac.textContent="C";
                                            let pre=affichage.textContent;
-                                           if(pre==val && pre==0){
-
+                                           if(pre==val && pre=="0"){
                                                   affichage.textContent=0;
                                            }else{
                                                  
-                                                 affichage.textContent=pre+val; 
+                                                pre=pre[0]=="0"?pre.substring(1):pre;
+                                                affichage.textContent=pre+val; 
                                            }
                                                 
                            }
