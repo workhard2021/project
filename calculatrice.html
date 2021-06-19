@@ -111,7 +111,7 @@
      <div id="container">
         
           <div class="affichage">
-                <span></span>
+                <span>0</span>
           </div>
           <div class="precedant">
               <span></span>
@@ -123,8 +123,8 @@
       
                   <div class="item_fonction">  
                         <!-- white foncer waouh hhhhh  -->
-                    <div  class="item white_foncer"><span>C</span></div>
-                    <div  class="item white_foncer"><span>X2</span></div>
+                    <div  class="item white_foncer ac"><span>AC</span></div>
+                    <div  class="item white_foncer"><span>X<sup>2</sup></span></div>
                     <div  class="item white_foncer"><span>%</span></div>
                     <div  class="item yellow"><span>/</span></div>
                   </div>
@@ -158,11 +158,13 @@
               // on peut remplacer signe et precedant par des tableaux
               const precedant=document.querySelector(".precedant span");
               const signe=document.querySelector(".signe span");
+              const ac=document.querySelector(".ac span");
               const chiffre=document.querySelectorAll('.item');
               function r(nombre, precision){
                     var precision = precision || 5;
                     var tmp = Math.pow(10, precision);
-                     return Math.round( nombre*tmp )/tmp;
+                    const x=Math.round( nombre*tmp )/tmp;
+                     return x?x :"Erreur";
 }
                  const calculer=(x,y,signe)=>{
       
@@ -176,7 +178,7 @@
                                    case "*":
                                    return r(x*y);
                                    case "%":
-                                   return r(x%y);
+                                   return r(x/100);
                                    default:
                                    return 0;
                             }    
@@ -185,20 +187,21 @@
             for(const el of chiffre){
 
                      el.addEventListener('click',()=>{
-                           var val=el.textContent;
+                               var val=el.textContent;
                              //recuperer signe et precedante valeur en tableau;
                              const signArray=signe.textContent.split(" ");
                              const precedantArray=precedant.textContent.split(" ");
+                             
                            switch(val){
 
                                    case "+":
                                           signe.textContent+="+"+" ";
-                                          affichage.textContent=" ";
+                                          affichage.textContent="";
                                           precedant.textContent+=" ";  
                                     break;
                                     case "-":
                                           signe.textContent+="-"+" ";
-                                          affichage.textContent=" ";
+                                          affichage.textContent="";
                                           precedant.textContent+=" ";  
                                     break;
                                     case "X":
@@ -212,41 +215,54 @@
                                          precedant.textContent+=" ";  
                                     break;
                                     case "%":
-                                         signe.textContent+="/"+" ";
-                                         affichage.textContent="";
-                                         precedant.textContent+=" ";  
+                                         let p=calculer(parseFloat(affichage.textContent),0,"%"); 
+                                         affichage.textContent=p;
+                                         signe.textContent="";
+                                         precedant.textContent=p;
                                     break;
                                     case "X2":
-                                         signe.textContent+="**"+" ";
-                                         affichage.textContent="";
-                                         precedant.textContent+=" ";  
+                                         let c=calculer(parseFloat(affichage.textContent),parseFloat(affichage.textContent),"*"); 
+                                         affichage.textContent=c;
+                                         signe.textContent="";
+                                         precedant.textContent=c;
                                     break;
 
                                     case "C":
-                                         affichage.textContent="";
+                                         affichage.textContent=0;
                                          precedant.textContent="";
+                                         ac.textContent="AC";
+                                         signe.textContent="";
+                                         break;
+                                    case "AC":
+                                         affichage.textContent=0;
+                                         precedant.textContent="";
+                                         ac.textContent="AC";
                                          signe.textContent="";
                                          break;
                                     case "=":
                                         let temp=precedantArray[0];
                                         delete signArray[signArray.length-1];
                                         for(let i=0;i<precedantArray.length-1;i++){ 
-
-                                                if(signArray[i]==="**"){
-                                                      temp=calculer(parseFloat(precedantArray[i]),parseFloat(precedantArray[i]),"*"); 
-                                                }else{
-                                                      temp=calculer(parseFloat(temp),parseFloat(precedantArray[i+1]),signArray[i]); 
-                                                }      
+                                          temp=calculer(parseFloat(temp),parseFloat(precedantArray[i+1]),signArray[i]); 
                                         }
-                                         affichage.textContent=temp;
-                                          //initialiser signe et precedante valeur;
-                                         precedant.textContent=temp;
-                                         signe.textContent="";
+                                           
+                                          //initialiser signe,precedante valeur et affichage valeur;
+                                          precedant.textContent=temp;
+                                          affichage.textContent=temp;
+                                          signe.textContent="";
                                          break;
                                     default:
-                                          precedant.textContent+=val; 
-                                          affichage.textContent+=val; 
-                                            
+                                           precedant.textContent+=val; 
+                                           ac.textContent="C";
+                                           let pre=affichage.textContent;
+                                           if(pre==val && pre==0){
+
+                                                  affichage.textContent=0;
+                                           }else{
+                                                 
+                                                 affichage.textContent=pre+val; 
+                                           }
+                                                
                            }
                        
                      });
